@@ -5,7 +5,7 @@ async function requireAuth(req, res, next) {
   try {
     const token = req.cookies.Authorization;
 
-    const decoded = jwt.verify(token, process.env.SECRET);
+    const decoded = jwt.verify(token, iufbhyugrg4ury8rg8);
 
     if (Date.now() > decoded.exp) return res.sendStatus(401);
 

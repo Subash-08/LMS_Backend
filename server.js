@@ -22,7 +22,9 @@ app.use(
 );
 
 connectToDb();
-
+app.get("/",(req,res)=>{
+  res.send("hello")
+})
 app.post("/signup", userController.signup);
 app.post("/login", userController.login);
 app.get("/logout", userController.logout);
@@ -34,7 +36,7 @@ app.get("/leads/:id", notesController.fetchLead);
 app.put("/leads/:id", notesController.updateLead);
 app.delete("/leads/:id", notesController.deleteLead);
 
-app.listen(process.env.PORT);
+app.listen(3000);
 
 
 
